@@ -1,7 +1,7 @@
 """Practicing with Numeric Operators."""
-__author__ = "730384808"
-Left: str = input(" Choose a number.")
-Right: str = input("Choose a number.")
+__author__ = 730384808
+Left: str = input("What number?")
+Right: str = input("What number?")
 print("Left-hand side: " + Left)
 print("Right-hand side: " + Right)
 answer: str = int(Left)**int(Right)

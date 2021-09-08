@@ -14,7 +14,6 @@ from random import randint
 
 # Begin your solution here...
 print("Your fortune cookie says...")
-randint(1, 4)
 number: int = randint(1, 4)
 if number == 1:
     print("A great person will come into your life.")

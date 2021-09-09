@@ -10,6 +10,6 @@ letter_count = int = 0
 i = int = 0 
 while i < len(word):
     if (word[i]) == letter:
-        count = (letter_count) + 1 
+        letter_count = (letter_count) + 1 
     i = i + 1 
 print("Count: " + str(letter_count))

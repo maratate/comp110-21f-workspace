@@ -15,8 +15,8 @@ def main() -> None:
     greet()
     global points
     points = 0 
-    player_choice: int = int(input(f"{player}, choose your adventure! 1: Guess the number 1-5. 2: Guess the number 1-10. 3: Leave the game. Choose an option 1-3: "))
     while points >= 0: 
+        player_choice: int = int(input(f"{player}, choose your adventure! 1: Guess the number 1-5. 2: Guess the number 1-10. 3: Leave the game. Choose an option 1-3: "))   
         if player_choice == 1:
             number_1: int = int(input("Guess the number 1-5: "))
             game1(number_1)
@@ -28,8 +28,7 @@ def main() -> None:
             print(f"Game over {player}, goodbye {SAD_EMOJI}! You had {points} adventure point(s).")
             points = points - 1 
             quit()
-        player_choice: int = int(input(f"{player}, choose your adventure! 1: Guess the number 1-5. 2: Guess the number 1-10. 3: Leave the game. Choose an option 1-3: "))
-
+        
 
 def greet() -> None:  
     """Greeting."""

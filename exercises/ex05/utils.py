@@ -25,11 +25,11 @@ def sub(x: list[int], start: int, end: int) -> list[int]:
         return list_2
     if start < 0:
         start = 0 
-    if end > len(x):
-        end = (len(x) - 1)
-    while start < end:
+    if end > (len(x)):
+        end = (len(x))
+    while start <= (end - 1):
         list_2.append(x[start])
-        start = start + 1 
+        start += 1 
     return list_2 
     
 

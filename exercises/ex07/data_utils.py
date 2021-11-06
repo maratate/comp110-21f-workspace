@@ -41,6 +41,7 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(x: dict[str, list[str]], number_rows: int) -> dict[str, list[str]]:
+    """Return a dict with the first N rows."""
     result: dict[str, list[str]] = {}
     if number_rows >= len(x):
         return x 
@@ -56,6 +57,7 @@ def head(x: dict[str, list[str]], number_rows: int) -> dict[str, list[str]]:
 
 
 def select(x: dict[str, list[str]], y: list[str]) -> dict[str, list[str]]:
+    """Return a dict with subset of original columns."""
     result: dict[str, list[str]] = {}
     for column in y:
         i: int = 0
@@ -65,7 +67,8 @@ def select(x: dict[str, list[str]], y: list[str]) -> dict[str, list[str]]:
     return result 
 
 
-def concat(x: dict[str, list[str]], y: dict[str, list[str]]):
+def concat(x: dict[str, list[str]], y: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Return a dict with two column based tables combined."""
     result: dict[str, list[str]] = {}
     for column in x:
         result[column] = x[column]
@@ -78,6 +81,7 @@ def concat(x: dict[str, list[str]], y: dict[str, list[str]]):
 
 
 def count(x: list[str]) -> dict[str, int]:
+    """Return a dict that counts the number of times the value was in the input lists."""
     result: dict[str, int] = {}
     for key in x:
         if key in result:
